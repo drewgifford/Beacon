@@ -1,5 +1,0 @@
-main: com.drewgifford.beacon.BeaconPlugin
-name: Beacon
-version: 0.1-SNAPSHOT
-author: Toadally
-api-version: 1.13
