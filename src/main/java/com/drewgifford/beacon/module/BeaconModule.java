@@ -2,6 +2,7 @@ package com.drewgifford.beacon.module;
 
 import com.drewgifford.beacon.entry.BeaconCollection;
 import com.google.gson.JsonObject;
+import org.bukkit.Location;
 
 public class BeaconModule {
 

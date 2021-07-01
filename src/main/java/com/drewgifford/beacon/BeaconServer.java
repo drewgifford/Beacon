@@ -30,7 +30,7 @@ public class BeaconServer {
                 PlayerModule module = new PlayerModule();
 
                 List<String> permissions = new ArrayList<String>();
-                permissions.add("players.inventory.*");
+                permissions.add("*");
 
                 JsonObject obj = module.update().getCollection().toJson(permissions);
                 String response = obj.toString();
