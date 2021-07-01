@@ -4,5 +4,9 @@ public enum Messages {
     // I probably don't need this but it just makes my life a lot nicer.
     PREFIX_CONSOLE,
     PREFIX_CHAT,
-    TEST_MESSAGE;
+    TEST_MESSAGE,
+    COMMAND_NOT_FOUND,
+    MISSING_PERMISSION,
+    MENU_HEADER,
+    HELP_FORMAT;
 }

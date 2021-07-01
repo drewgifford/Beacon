@@ -1,5 +1,7 @@
 package com.drewgifford.beacon;
 
+import com.drewgifford.beacon.commands.CommandHandler;
+import com.drewgifford.beacon.module.ModuleLoader;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -13,6 +15,7 @@ public class BeaconPlugin extends JavaPlugin {
     private PluginDescriptionFile pluginYml = this.getDescription();
     String version = pluginYml.getVersion();
     public static DataStore dataStore;
+    public static ModuleLoader moduleLoader;
     private BeaconServer server;
 
     //Yup, we are...
@@ -26,6 +29,10 @@ public class BeaconPlugin extends JavaPlugin {
 
 
         loadWebserver();
+
+        this.getCommand("beacon").setExecutor(new CommandHandler());
+
+        moduleLoader = new ModuleLoader();
     }
 
     @Override

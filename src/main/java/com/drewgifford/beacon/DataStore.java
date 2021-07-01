@@ -88,7 +88,7 @@ public class DataStore {
         int counter = 0;
         // This should replace {0}, {1}, {2}, with their respective arguments... unless I'm dumb! Very much a possibility!
         for (String arg : args){
-            raw.replace("{" + counter + "}", arg);
+            raw = raw.replace("{" + counter + "}", arg);
             counter++;
         }
         // Lazy function part 2!
