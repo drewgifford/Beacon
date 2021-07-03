@@ -1,7 +1,0 @@
-PREFIX_CONSOLE: "BEACON | "
-PREFIX_CHAT: "&b&lBEACON &f|&r "
-TEST_MESSAGE: "Hello world!"
-COMMAND_NOT_FOUND: "&cCommand not found. Type /beacon help for help."
-MISSING_PERMISSION: "&cYou do not have permission to use that command."
-MENU_HEADER: "&3-----------------[ &b&l{0} &3]-----------------"
-HELP_FORMAT: "&f{0} &8- &7{1}"

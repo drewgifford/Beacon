@@ -1,0 +1,23 @@
+package com.drewgifford.beacon;
+
+public enum Messages {
+    // I probably don't need this but it just makes my life a lot nicer.
+    COMMAND_NOT_FOUND,
+    MISSING_PERMISSION,
+    MENU_HEADER,
+    MODULE_INFO_NAME,
+    MODULE_INFO_ID,
+    MODULE_INFO_VERSION,
+    MODULE_INFO_DEPENDENCIES,
+    MODULE_INFO_AUTHOR,
+    MODULE_INFO_DESCRIPTION,
+    HELP_FORMAT,
+    MODULE_NOT_FOUND,
+    MODULE_ENABLED,
+    MODULE_ENABLED_ERROR,
+    MODULE_DISABLED,
+    MODULE_ALREADY_ENABLED,
+    MODULE_ALREADY_DISABLED,
+    MODULE_UPDATED_ERROR,
+    MODULE_UPDATED;
+}
