@@ -2,6 +2,8 @@
 
 Provide a way for your server members to develop applications and access JSON-formatted data like player locations, inventories, pings, specific plugin data or server information without having to install individual plugins.
 
+Server owners can assign different "keys" different permissions, allowing the holders of each key a configurable level of access to information provided by different installed Modules.
+
 Beacon is built on Spigot, meaning it will be compatible on Spigot and its forks, although support is not provided on any platform but Spigot.
 
 - Downloads (coming soon)
@@ -13,13 +15,15 @@ jQuery implementation
     $.ajax({
 	type: 'POST',
 	url: "SERVER.IP:PORT",
-	data: {"key": "KEY_PROVIDED_BY_SERVER_OWNER"},
+	data: {
+	    "key": "KEY_PROVIDED_BY_SERVER_OWNER"
+	},
 	success: function(response){
-        // do stuff, data is in JSON
+            // do stuff, data is in JSON
 	},
 	error: function(){
-        // process error
-    }
+            // process error
+        }
     });
 
 ```
