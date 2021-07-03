@@ -11,15 +11,15 @@ Beacon is built on Spigot, meaning it will be compatible on Spigot and its forks
 jQuery implementation
 ```javascript
     $.ajax({
-		type: 'POST',
-		url: "SERVER.IP:PORT",
-		data: {"key": "KEY_PROVIDED_BY_SERVER_OWNER"},
-		success: function(response){
-		    // do stuff, data is in JSON
-		},
-		error: function(){
-			// process error
-		}
+	type: 'POST',
+	url: "SERVER.IP:PORT",
+	data: {"key": "KEY_PROVIDED_BY_SERVER_OWNER"},
+	success: function(response){
+        // do stuff, data is in JSON
+	},
+	error: function(){
+        // process error
+    }
     });
 
 ```
