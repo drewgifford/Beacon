@@ -5,6 +5,7 @@ import com.drewgifford.beacon.module.ModuleLoader;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
+import spark.Spark;
 
 public class BeaconPlugin extends JavaPlugin {
     // I'm really doing this, aren't I...
@@ -19,6 +20,7 @@ public class BeaconPlugin extends JavaPlugin {
 
     @Override
     public void onEnable(){
+        Spark.port(8080);
         ChatUtil.sendMessage(null, "Initializing Beacon v" + version);
         ChatUtil.sendMessage(null, "Let's get this party started!");
 

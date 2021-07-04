@@ -1,6 +1,14 @@
 package com.drewgifford.beacon;
 
+import com.drewgifford.beacon.entry.BeaconCollection;
+import com.drewgifford.beacon.module.BeaconModule;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
 import spark.Spark;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BeaconServer {
 
@@ -12,28 +20,34 @@ public class BeaconServer {
 
     public void initialize() throws Exception{
         // This is the reason the JAR is so big... thanks Obama!
-        Spark.stop();
+        Spark.awaitStop();
 
-
-        Spark.port(8080);
         //TODO: remove?
         enableCors();
 
         Spark.post("/", (req, res) -> {
             try {
-                /*PlayerModule module = new PlayerModule();
 
+                String key = "" + req.queryParams("key");
+
+                //TODO: remove
                 List<String> permissions = new ArrayList<String>();
-                permissions.add("player.inventory.*");
-                permissions.add("player.world");
-                permissions.add("player.location");
+                permissions.add("*");
 
-                JsonObject obj = module.update().getCollection().toJson(permissions);
-                String response = obj.toString();*/
-                String response = "test!";
+                List<BeaconModule> modules = BeaconPlugin.moduleLoader.getModules();
+
+                BeaconCollection finalCollection = new BeaconCollection();
+
+                for(BeaconModule module : modules){
+                    finalCollection.add(module.getId(), module.getCollection(), module.getId());
+                }
+
+                JsonObject obj = finalCollection.toJson(permissions);
 
 
-                System.out.println(req.body());
+
+                String response = obj.toString();
+
                 return response;
             } catch (Exception e){
                 e.printStackTrace();
